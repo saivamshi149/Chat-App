@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realtime Chat App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== LOGIN / SIGNUP PAGE ===== -->
+  <div id="loginPage" class="page active">
+    <h2>Login / Signup</h2>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <div>
+      <button id="loginBtn">Login</button>
+      <button id="signupBtn">Signup</button>
+    </div>
+  </div>
+
+  <!-- ===== ROOM SELECT PAGE ===== -->
+  <div id="roomPage" class="page" style="display: none;">
+    <h2>Select or Create a Room</h2>
+    <input type="text" id="roomInput" placeholder="Enter room name" />
+    <button id="joinRoomBtn">Join Room</button>
+  </div>
+
+  <!-- ===== CHAT PAGE ===== -->
+  <div id="chatPage" class="page" style="display: none;">
+    <h2 id="chatRoomTitle">Chat Room</h2>
+    <div id="chatMessages" class="chat-box"></div>
+    <div class="chat-input">
+      <input type="text" id="chatInput" placeholder="Type a message..." />
+      <button id="sendBtn">Send</button>
+    </div>
+    <button id="backBtn">⬅ Back to Rooms</button>
+  </div>
+
+  <!-- ===== SOCKET.IO & SCRIPT ===== -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
