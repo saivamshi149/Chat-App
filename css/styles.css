@@ -1,0 +1,28 @@
+:root{ --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#6ee7b7 }
+*{box-sizing:border-box}
+html,body,#app{height:100%;}
+body{margin:0;font-family:Inter, system-ui, Arial, sans-serif;background:linear-gradient(180deg,#071025 0%, #071022 100%);color:#e6eef6}
+.card{background:rgba(255,255,255,0.03);padding:20px;border-radius:12px;max-width:420px;margin:48px auto}
+h2{margin:0 0 12px 0}
+label{display:block;margin:8px 0}
+input{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:inherit}
+.row{display:flex;gap:8px;margin-top:12px}
+button{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);cursor:pointer}
+.error{color:#ff7b7b;margin-top:8px}
+
+
+.chat-layout{display:grid;grid-template-columns:240px 1fr;height:100vh}
+.sidebar{padding:16px;background:rgba(255,255,255,0.02);border-right:1px solid rgba(255,255,255,0.02)}
+.profile{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.users-list{margin-top:12px}
+.users-list ul{list-style:none;padding:0;margin:8px 0}
+.users-list li{padding:6px 4px;border-radius:6px}
+
+
+.chat-area{display:flex;flex-direction:column}
+.messages{flex:1;padding:18px;overflow:auto}
+.message{margin-bottom:10px;max-width:70%;padding:10px;border-radius:10px;background:rgba(255,255,255,0.03)}
+.message.you{background:rgba(110,231,183,0.08);margin-left:auto}
+.message .meta{font-size:12px;color:var(--muted);margin-bottom:6px}
+.message-form{display:flex;padding:12px;border-top:1px solid rgba(255,255,255,0.02)}
+.message-form input{flex:1;margin-right:8px}

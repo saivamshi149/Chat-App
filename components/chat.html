@@ -1,0 +1,40 @@
+<section id="chat-component" class="chat-layout">
+    <aside class="sidebar">
+      <div class="profile">
+        <div id="profile-name"></div>
+        <button id="btn-logout">Logout</button>
+      </div>
+      <hr />
+  
+      <div class="rooms">
+        <strong>Rooms</strong>
+        <ul id="rooms-ul"></ul>
+        <div style="margin-top:8px;display:flex;gap:8px">
+          <input id="new-room-name" placeholder="New room name" style="flex:1;padding:6px;border-radius:6px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit" />
+          <button id="btn-create-room" style="padding:6px 10px;border-radius:6px">Create</button>
+        </div>
+        <p id="room-error" class="error" style="margin-top:8px"></p>
+      </div>
+  
+      <hr />
+      <div class="users-list">
+        <strong>Users</strong>
+        <ul id="users-ul"></ul>
+      </div>
+    </aside>
+  
+    <main class="chat-area">
+      <div style="padding:12px;background:rgba(0,0,0,0.02);display:flex;align-items:center;gap:12px">
+        <div>Room:</div>
+        <div id="current-room" style="font-weight:600">general</div>
+      </div>
+  
+      <div id="messages" class="messages"></div>
+  
+      <form id="message-form" class="message-form">
+        <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off" required />
+        <button type="submit">Send</button>
+      </form>
+    </main>
+  </section>
+  
